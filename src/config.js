@@ -1,3 +1,3 @@
 export default {
-	apiUrl: 'https://blossomfountschools.com/api'
+	apiUrl: [INSERT YOUR API LINK HERE IN QUOTATION MARKS]
 }
