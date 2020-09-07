@@ -120,6 +120,6 @@ export default {
 
 <style>
 .mb-50 {
-margin-bottom: 500px;
+    margin-bottom: 500px;
 }
 </style>
