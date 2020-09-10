@@ -3,7 +3,7 @@
         <div class="container">
             <router-link 
                 class="navbar-brand" 
-                to="/home">
+                to="/">
                 <img 
                     src="../assets/logo.png" 
                     width="auto" 
@@ -21,6 +21,12 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <router-link 
+                            to="/home" 
+                            class="nlink">Articles
+                        </router-link>
+                    </li>
                     <li class="nav-item" v-if="!authUser">
                         <router-link 
                             to="/login" 
