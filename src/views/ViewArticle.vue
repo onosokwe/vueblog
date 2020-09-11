@@ -2,11 +2,26 @@
 	<div class="container">
 		<div class="row" v-if="!loading">
 			<div class="col-md-8 offset-md-2" >
-				<div class="card my-3">
-					<div class="card-header text-center font-weight-bold">{{ article.title }}</div>
+				<div class="card my-3" v-for="art in article" :key="art.postid">
+					<div class="card-header text-center font-weight-bold">{{ art.title }}</div>
 					<div class="card-body">
-						<img :src="article.image" alt="" class="card-img-top" height="320px" />
-						<div class="card-content" v-html="article.post"></div>
+						<img 
+							:src="art.image" 
+							alt=" " 
+							class="card-img-top" 
+							height="320px" 
+						/>
+						<div 
+							class="card-content" 
+							v-html="art.post">
+						</div>
+					</div>
+					<div class="my-4">
+						<Disqus 
+							shortname="vueblog-5" 
+							url=""
+							:identifier="art.postid"
+							/>
 					</div>
 				</div>
 			</div>
@@ -20,8 +35,12 @@
 <script>
 import Axios from 'axios';
 import config from '@/config';
+import { Disqus } from 'vue-disqus'
 
 export default {
+	components: {
+		Disqus
+	},
 	mounted(){
 		this.getArticle();
 	},
