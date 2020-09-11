@@ -1,6 +1,11 @@
 import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
+import VueDisqus from 'vue-disqus'
+
+Vue.use(VueDisqus, {
+	shortname: 'vueblog-5'
+})
 
 Vue.config.productionTip = false
 
