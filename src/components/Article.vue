@@ -21,4 +21,3 @@ export default {
     props: ["article"]
 };
 </script>
-
